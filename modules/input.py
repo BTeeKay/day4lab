@@ -35,7 +35,6 @@ def get_tasks_taking_at_least(list, time):
     return new_list
 
 
-print(get_tasks_taking_at_least(tasks, 30))
 
 # Find a task with a given description
 
@@ -49,7 +48,6 @@ def get_task_with_description(list, description):
     return new_list
 
 
-print(get_task_with_description(tasks, "good boy dog"))
 
 # Extention (Function):
 

@@ -12,24 +12,22 @@ tasks = [
 # two complete and three failed
 def get_uncompleted_tasks(list):
     
-    total = 0
-    brian = get_tasks_by_status(tasks, False)
-    for b in brian:
-        total += 1
-    
+    total = 0 
+    for i in list:
+        if i["completed"]  == False:
+            total += 1 
+
     return total
 
 ## Get a list of completed tasks
 def get_completed_tasks(list):
     
-    total = 0
-    brian = get_tasks_by_status(tasks, True)
-    for b in brian:
-        total += 1
-    
-    return total 
+    total = 0 
+    for i in list:
+        if i["completed"]  == True:
+            total += 1 
 
-print(get_completed_tasks(tasks))
+    return total
 
 ## Get tasks where time_taken is at least a given time
 # want to have a minimum time taken to do a task >=

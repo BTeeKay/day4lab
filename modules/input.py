@@ -3,10 +3,10 @@ from data.task_list import *
 
 def get_uncompleted_tasks(list):
 
-    total = 0
+    total = []
     for i in list:
         if i["completed"] == False:
-            total += 1
+            total.append(i)
 
     return total
 
@@ -15,10 +15,10 @@ def get_uncompleted_tasks(list):
 
 def get_completed_tasks(list):
 
-    total = 0
+    total = []
     for i in list:
         if i["completed"] == True:
-            total += 1
+            total.append(i)
 
     return total
 

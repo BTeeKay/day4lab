@@ -11,7 +11,13 @@ tasks = [
 ## Get a list of uncompleted tasks
 # two complete and three failed
 def get_uncompleted_tasks(list):
-    pass
+    
+    total = 0
+    for i in list:
+        if i["completed"] == False:
+            total += 1
+    
+    return total
 
 ## Get a list of completed tasks
 def get_completed_tasks(list):

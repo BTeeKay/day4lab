@@ -9,6 +9,7 @@ tasks = [
 # Functions to complete:
 
 ## Get a list of uncompleted tasks
+# two complete and three failed
 def get_uncompleted_tasks(list):
     pass
 

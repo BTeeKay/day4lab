@@ -1,7 +1,14 @@
 from modules.output import *
-from data.task_list import *
 from modules.input import *
 
+
+answer = input("do you want premade tasks?")
+if answer.lower() == "y":
+    from data.task_list import *
+elif answer.lower() == "n":
+    from data.blank_tasks import *
+else:
+    print("is this working")
 
 while (True):
     print_menu()

@@ -1,5 +1,3 @@
-from data.task_list import *
-
 
 def get_uncompleted_tasks(list):
 

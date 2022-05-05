@@ -13,19 +13,20 @@ tasks = [
 def get_uncompleted_tasks(list):
     
     total = 0
-    for i in list:
-        if i["completed"] == False:
-            total += 1
+    brian = get_tasks_by_status(tasks, False)
+    for b in brian:
+        total += 1
     
     return total
 
 ## Get a list of completed tasks
 def get_completed_tasks(list):
-    total = 0 
-    for i in list:
-        if i["completed"]  == True:
-            total += 1 
-
+    
+    total = 0
+    brian = get_tasks_by_status(tasks, True)
+    for b in brian:
+        total += 1
+    
     return total 
 
 print(get_completed_tasks(tasks))
@@ -51,11 +52,19 @@ def get_task_with_description(list, description):
             new_list.append(i)
     return new_list
 
+print(get_task_with_description(tasks, "good boy dog"))
+
 # Extention (Function): 
 
 ## Get a list of tasks by status
 def get_tasks_by_status(list, status):
-    pass
+    new_list = []
+
+    for i in list:
+        if i["completed"] == status:
+            new_list.append(i)
+    
+    return new_list
 
 def mark_task_complete(task):
     task["completed"] = True
